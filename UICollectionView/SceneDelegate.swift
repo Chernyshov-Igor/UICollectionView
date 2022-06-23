@@ -14,14 +14,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         let viewController = ViewController()
+        let emptyViewController = EmptyViewController()
         let tabBarController = UITabBarController()
         tabBarController.tabBar.backgroundColor = .lightGray
 
-        let oneNavigationController = UINavigationController(rootViewController: viewController)
+        let oneNavigationController = UINavigationController(rootViewController: emptyViewController)
         oneNavigationController.tabBarItem = UITabBarItem(title: "Медиатека",
                                                           image: UIImage(systemName: "photo.fill.on.rectangle.fill"),
                                                           tag: 0)
-        let twoNavigationController = UINavigationController(rootViewController: viewController)
+        let twoNavigationController = UINavigationController(rootViewController: emptyViewController)
         twoNavigationController.tabBarItem = UITabBarItem(title: "Для Вас",
                                                           image: UIImage(systemName: "heart.text.square.fill"),
                                                           tag: 1)
@@ -29,7 +30,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         treeNavigationController.tabBarItem = UITabBarItem(title: "Альбомы",
                                                            image: UIImage(systemName: "folder.fill"),
                                                            tag: 2)
-        let fourNavigationController = UINavigationController(rootViewController: viewController)
+        let fourNavigationController = UINavigationController(rootViewController: emptyViewController)
         fourNavigationController.tabBarItem = UITabBarItem(title: "Поиск",
                                                            image: UIImage(systemName: "magnifyingglass"),
                                                            tag: 3)
